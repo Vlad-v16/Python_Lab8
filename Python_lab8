@@ -1,0 +1,43 @@
+from collections import Counter
+
+# Завдання 1: Голосні літери
+def find_vowels(text):
+    vowels = "aeiouаеєиіїоуюя"
+    result = []
+
+    for char in text.lower():
+        if char in vowels:
+            result.append(char)
+
+    print("Завдання 1 ")
+    print("Голосні літери:", result)
+    print("Кількість голосних:", len(result))
+    print()
+
+# Завдання 2: Об'єднання числових списків
+def merge_and_sort_lists(list1, list2):
+    combined = list1 + list2
+    unique_numbers = list(set(combined))
+    sorted_numbers = sorted(unique_numbers)
+
+    print("Завдання 2 ")
+    print("Об'єднаний, унікальний, відсортований список:", sorted_numbers)
+    print()
+
+# Завдання 3: Підрахунок символів у тексті
+def count_characters(text):
+    counter = Counter(text)
+
+    print("Завдання 3 ")
+    print("Кількість кожного символу:")
+    for char, count in counter.items():
+        print(f"'{char}': {count}")
+    print()
+
+text_example = "Привіт! Це текст, з яким ми працюємо."
+list1_example = [1, 2, 3, 3]
+list2_example = [3, 4, 5]
+
+find_vowels(text_example)
+merge_and_sort_lists(list1_example, list2_example)
+count_characters(text_example)
